@@ -1,0 +1,28 @@
+SOLID Principles
+
+1. Single Responsibility Principle
+    A class should have one, and only one, reason to change. This principle advocates that a class should have only one job or responsibility, 
+    making it easier to understand, modify, and maintain. For example, consider a class Email that is responsible for sending emails. It should 
+    not be responsible for data validation or formatting.
+
+2. Open/Closed Principle
+    Software entities should be open for extension but closed for modification. This principle suggests that you should be able to add new 
+    functionality without altering the existing code. This can be achieved through inheritance, interfaces, and abstraction. For example, using 
+    an abstract class Shape that can be extended to create specific shapes such as Circle and Square without modifying the abstract class.
+
+3. Liskov Substitution Principle
+    Objects of a superclass should be replaceable with objects of its subclasses without affecting the functionality. This principle emphasizes 
+    that a derived class should extend the base class without changing its behavior. For instance, Rectangle-Square problem. Every single place
+    where you use Rectangle(parent class) should be replaced with Square(child class) - we cannot do this because all Squares are Rectangle but
+    vise-versa not possible and Liskov's principle fails.
+    If a function takes an instance of a class. That same function should also be able to take the instance of derived class from that class.
+
+4. Interface Segregation Principle
+    A client should not be forced to implement interfaces they don't use. This principle suggests that you should break down interfaces into 
+    smaller, specific ones, rather than having a large, general-purpose interface. This prevents classes from implementing unnecessary methods. 
+    For example, splitting a Printer interface into Printable and Scannable interfaces.
+
+5. Dependency Inversion Principle
+    High-level modules should not depend on low-level modules. Both should depend on abstractions(interfaces). Additionally, abstractions should 
+    not depend on details. Details should depend on abstractions. This principle promotes loose coupling and allows for easier maintenance and 
+    testing. For instance, using dependency injection to provide dependencies to a class rather than having the class create them.
